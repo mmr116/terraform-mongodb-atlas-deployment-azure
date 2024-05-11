@@ -1,9 +1,11 @@
 # terraform-mongodb-atlas-deployment-azure
 
 # Overview:
-This repository contains Terraform configuration files for deploying resources to MongoDB Atlas on the Azure Cloud. The example provided here deploys a dedicated MongoDB cluster in a multi-region setup.
+
+This repository contains Terraform configuration files for deploying resources to MongoDB Atlas on the Azure Cloud. The example provided here deploys a dedicated MongoDB cluster in a multi-region setup with vertical scaling and backup enabled.
 
 # Assumptions:
+
 Terraform version:
 
 Terraform v1.8.2 (installed on CentOS Linux release 8.5.2111)
