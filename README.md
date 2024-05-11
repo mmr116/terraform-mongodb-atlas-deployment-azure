@@ -4,6 +4,10 @@
 This repository contains Terraform configuration files for deploying resources to MongoDB Atlas on the Azure Cloud. The example provided here deploys a dedicated MongoDB cluster in a multi-region setup.
 
 # Assumptions:
+Terraform version:
+
+Terraform v1.8.2 (installed on CentOS Linux release 8.5.2111)
+
 Secrets Management: Secrets required for deployment, such as MongoDB Atlas Organization ID and MongoDB Atlas API Keys, are stored in Azure Key Vault.
 
 Access Permissions: An Azure Service Principal is utilized to access the secrets stored in Azure Key Vault. It requires the "Key Vault Secrets User" role access on the Azure Key Vault.
