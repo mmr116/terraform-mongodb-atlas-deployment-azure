@@ -7,7 +7,8 @@ This repository contains Terraform configuration files for deploying resources t
 Secrets Management: Secrets required for deployment, such as MongoDB Atlas Organization ID and MongoDB Atlas API Keys, are stored in Azure Key Vault.
 
 Access Permissions: An Azure Service Principal is utilized to access the secrets stored in Azure Key Vault. It requires the "Key Vault Secrets User" role access on the Azure Key Vault.
-Configuration. Before deploying, ensure you have the necessary values associated with the Service Principal and Azure Subscription in the terraform.tfvars file. Here are the required variables:
+
+Configuration: Before deploying, ensure you have the necessary values associated with the Service Principal and Azure Subscription in the terraform.tfvars file. Here are the required variables:
 
 subscription_id = "your-subscription-id"
 
