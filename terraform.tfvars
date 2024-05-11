@@ -24,5 +24,18 @@ auto_scale_down_enabled            = true
 mongo_db_major_version             = "7.0"
 cloud_backup                       = true
 pitr_backup_enabled                = true
-tag_env                            = "env"
-tag_env_value                      = "dev"
+tags = [
+  {
+    tag_key   = "env"
+    tag_value = "dev"
+  },
+  {
+    tag_key   = "cloud_provider"
+    tag_value = "azure"
+  },
+  {
+    tag_key   = "costcenter"
+    tag_value = "abcd"
+  }
+]
+
