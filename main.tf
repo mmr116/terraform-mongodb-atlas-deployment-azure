@@ -88,8 +88,11 @@ resource "mongodbatlas_cluster" "example" {
   }
 
   # Specify tags for the cluster
-  tags {
-    key   = var.tag_env
-    value = var.tag_env_value
-  }  
+  dynamic "tags" {
+    for_each = { for idx, tag in var.tags : idx => tag }
+    content {
+      key   = tags.value.tag_key
+      value = tags.value.tag_value
+    }
+  }
 }
