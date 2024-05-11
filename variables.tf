@@ -124,12 +124,10 @@ variable "pitr_backup_enabled" {
   type        = bool
 }
 
-variable "tag_env" {
-  description = "Tag for database env"
-  type        = string
-}
-
-variable "tag_env_value" {
-  description = "Value for database env"
-  type        = string
+variable "tags" {
+  description = "List of maps containing tag key-value pairs"
+  type        = list(object({
+    tag_key   = string
+    tag_value = string
+  }))
 }
