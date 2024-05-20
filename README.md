@@ -10,11 +10,11 @@ Terraform version:
 
 Terraform v1.8.2 (installed on CentOS Linux release 8.5.2111)
 
-Secrets Management: Secrets required for deployment, such as MongoDB Atlas Organization ID and MongoDB Atlas API Keys, are stored in Azure Key Vault.
+Secrets Management: Secrets required for deployment, such as MongoDB Atlas Organization ID and MongoDB Atlas API Keys, are stored in Azure Key Vault (deployment of Azure Key Vault is not part of this Terraform codebase)
 
 Access Permissions: An Azure Service Principal is utilized to access the secrets stored in Azure Key Vault. It requires the "Key Vault Secrets User" role access on the Azure Key Vault.
 
-Configuration: Before deploying, ensure you have the necessary values associated with the Service Principal and Azure Subscription in the terraform.tfvars file. Here are the required variables:
+Configuration: Before deploying, ensure you have the necessary values associated with the Service Principal, Azure Subscription and Key Vault in the terraform.tfvars file. Here are the required variables:
 
 subscription_id = "your-subscription-id"
 
