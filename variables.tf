@@ -124,6 +124,16 @@ variable "pitr_backup_enabled" {
   type        = bool
 }
 
+variable "cluster_paused" {
+  description = "Flag that indicates whether the cluster is paused or not"
+  type        = bool
+}
+
+variable "termination_protection_enabled" {
+  description = "Flag that indicates whether termination protection is enabled on the cluster"
+  type        = bool
+}
+
 variable "admin_username" {
   description = "Username for the MongoDB Atlas admin user"
   type        = string
