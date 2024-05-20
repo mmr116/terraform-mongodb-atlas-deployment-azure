@@ -55,7 +55,7 @@ resource "mongodbatlas_project" "example" {
   org_id      = data.azurerm_key_vault_secret.mongodb_atlas_organization_id.value
 }
 
-# Define users
+# Define database users
 resource "mongodbatlas_database_user" "admin_user" {
   username           = var.admin_username
   password           = data.azurerm_key_vault_secret.mongodb_atlas_admin_user.value
