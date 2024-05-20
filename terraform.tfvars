@@ -24,6 +24,8 @@ auto_scale_down_enabled            = true
 mongo_db_major_version             = "7.0"
 cloud_backup                       = true
 pitr_backup_enabled                = true
+admin_username                     = "admin_user"
+app_username                       = "app_user"
 tags = [
   {
     tag_key   = "env"
@@ -38,4 +40,3 @@ tags = [
     tag_value = "abcd"
   }
 ]
-
