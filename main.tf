@@ -33,6 +33,16 @@ data "azurerm_key_vault_secret" "mongodb_atlas_organization_id" {
   key_vault_id = var.key_vault_id
 }
 
+data "azurerm_key_vault_secret" "mongodb_atlas_admin_user" {
+  name         = "mongodb-atlas-admin-user-password"
+  key_vault_id = var.key_vault_id
+}
+
+data "azurerm_key_vault_secret" "mongodb_atlas_app_user" {
+  name         = "mongodb-atlas-app-user-password"
+  key_vault_id = var.key_vault_id
+}
+
 # Define the MongoDB Atlas provider block
 provider "mongodbatlas" {
   public_key  = data.azurerm_key_vault_secret.mongodb_atlas_api_public_key.value
@@ -43,6 +53,29 @@ provider "mongodbatlas" {
 resource "mongodbatlas_project" "example" {
   name        = var.project_name
   org_id      = data.azurerm_key_vault_secret.mongodb_atlas_organization_id.value
+}
+
+# Define users
+resource "mongodbatlas_database_user" "admin_user" {
+  username           = var.admin_username
+  password           = data.azurerm_key_vault_secret.mongodb_atlas_admin_user.value
+  project_id         = mongodbatlas_project.example.id
+  auth_database_name = "admin"
+  roles {
+    role_name    = "atlasAdmin"
+    database_name = "admin"
+  }
+}
+
+resource "mongodbatlas_database_user" "app_user" {
+  username           = var.app_username
+  password           = data.azurerm_key_vault_secret.mongodb_atlas_app_user.value
+  project_id         = mongodbatlas_project.example.id
+  auth_database_name = "admin"
+  roles {
+    role_name    = "readWriteAnyDatabase"
+    database_name = "admin"
+  }
 }
 
 # Define the MongoDB Atlas cluster resource
