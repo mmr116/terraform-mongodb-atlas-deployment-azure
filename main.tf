@@ -104,7 +104,11 @@ resource "mongodbatlas_cluster" "example" {
   # Specify cloud backup and continous cloud backup configuration
   cloud_backup = var.cloud_backup
   pit_enabled  = var.pitr_backup_enabled
-  
+
+  # specify cluster status
+  paused                         = var.cluster_paused
+  termination_protection_enabled = var.termination_protection_enabled
+
   # Specify replication configuration in a multi-region cluster
   replication_specs {
     num_shards = 1
@@ -136,4 +140,25 @@ resource "mongodbatlas_cluster" "example" {
       value = tags.value.tag_value
     }
   }
+}
+
+# Output section
+output "mongodbatlas_project_id" {
+  value = mongodbatlas_project.example.id
+}
+
+output "mongodbatlas_cluster_id" {
+  value = mongodbatlas_cluster.example.id
+}
+
+output "mongodbatlas_cluster_name" {
+  value = mongodbatlas_cluster.example.name
+}
+
+output "admin_user_username" {
+  value = mongodbatlas_database_user.admin_user.username
+}
+
+output "app_user_username" {
+  value = mongodbatlas_database_user.app_user.username
 }
