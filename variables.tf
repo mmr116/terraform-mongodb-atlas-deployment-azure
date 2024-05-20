@@ -124,6 +124,16 @@ variable "pitr_backup_enabled" {
   type        = bool
 }
 
+variable "admin_username" {
+  description = "Username for the MongoDB Atlas admin user"
+  type        = string
+}
+
+variable "app_username" {
+  description = "Username for the MongoDB Atlas app user"
+  type        = string
+}
+
 variable "tags" {
   description = "List of maps containing tag key-value pairs"
   type        = list(object({
