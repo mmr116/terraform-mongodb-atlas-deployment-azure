@@ -78,6 +78,14 @@ resource "mongodbatlas_database_user" "app_user" {
   }
 }
 
+# Define MongoDB Atlas maintenance window
+resource "mongodbatlas_maintenance_window" "example" {
+  project_id             = mongodbatlas_project.example.id
+  day_of_week            = 7
+  hour_of_day            = 6
+  auto_defer_once_enabled = true
+}
+
 # Define the MongoDB Atlas cluster resource
 resource "mongodbatlas_cluster" "example" {
   project_id                  = mongodbatlas_project.example.id
