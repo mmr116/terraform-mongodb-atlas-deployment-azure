@@ -7,7 +7,7 @@ This repository contains Terraform configuration files for deploying resources t
 
 <img width="542" alt="Terraform demo" src="https://github.com/user-attachments/assets/d9acc13e-ae80-47e9-ad6a-8143e8d6741c">
 
-# Assumptions:
+# Pre-requisites:
 
 Terraform version (Opensource):
 
