@@ -70,5 +70,6 @@ Keep sensitive information such as client secrets and API keys confidential and 
 
 This setup requires a Terraform Cloud account and a Terraform Cloud workspace integrated with the GitHub repository using a Terraform token. In this configuration, secrets are stored as sensitive data within Terraform Cloud, eliminating the need for Azure Key Vault as mentioned above.
 
+
 <img width="536" alt="Terraform cloud demo" src="https://github.com/user-attachments/assets/7d799f81-9a9f-416d-a431-3710a254dee5">
 
