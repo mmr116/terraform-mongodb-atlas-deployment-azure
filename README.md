@@ -66,9 +66,9 @@ Ensure the on the MongoDB Atlas account the API keys have proper permissions to 
 Keep sensitive information such as client secrets and API keys confidential and secure
 
 
-# Optional Terraform Environment (Terraform Cloud instead of Terraform Opensource)
+# Alternate Terraform Environment (Terraform Cloud instead of Terraform Opensource)
 
-This setup requires a Terraform Cloud account and a Terraform Cloud workspace integrated with the GitHub repository using a Terraform token. In this configuration, secrets are stored as sensitive data within Terraform Cloud, eliminating the need for Azure Key Vault as mentioned above.
+This setup requires a Terraform Cloud account and a Terraform Cloud workspace integrated with the GitHub repository via an OAuth connection, which grants Terraform Cloud the necessary permissions to access the repository. In this configuration, secrets are stored as sensitive data within Terraform Cloud, eliminating the need for Azure Key Vault as mentioned above.
 
 
 <img width="546" alt="Terraform cloud demo" src="https://github.com/user-attachments/assets/2febab67-3e25-4537-9589-b6b47c75681e">
