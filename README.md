@@ -9,7 +9,7 @@ This repository contains Terraform configuration files for deploying resources t
 
 # Pre-requisites:
 
-Terraform version (Opensource):
+Terraform version (Terraform Open Source):
 
 Terraform v1.8.2 (installed on a VM with CentOS Linux release 8.5.2111)
 
@@ -66,7 +66,7 @@ Ensure the on the MongoDB Atlas account the API keys have proper permissions to 
 Keep sensitive information such as client secrets and API keys confidential and secure
 
 
-# Alternate Terraform Environment (Terraform Cloud instead of Terraform Opensource)
+# Alternate Terraform Environment (Terraform Cloud instead of Terraform Open Source)
 
 This setup requires a Terraform Cloud account and a Terraform Cloud workspace integrated with the GitHub repository via an OAuth connection, which grants Terraform Cloud the necessary permissions to access the repository. In this configuration, secrets are stored as sensitive data within Terraform Cloud, eliminating the need for Azure Key Vault as mentioned above.
 
