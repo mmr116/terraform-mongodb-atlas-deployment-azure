@@ -29,7 +29,7 @@ tenant_id       = "your-tenant-id"
 
 key_vault_id    = "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.KeyVault/vaults/<key-vault-name>"
 
-Replace placeholders such as "your-subscription-id", "your-client-id", "your-client-secret", "your-tenant-id", <subscription-id>, <resource-group-name>, and <key-vault-name> with actual values corresponding to your Azure environment.
+Replace placeholders such as "your-subscription-id", "your-client-id", "your-client-secret", "your-tenant-id", "subscription-id", "resource-group-name", and "key-vault-name" with actual values related to your Azure cloud environment.
 
 # Deployment Steps:
 
