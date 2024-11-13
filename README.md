@@ -5,6 +5,8 @@
 
 This repository contains Terraform configuration files for deploying resources to MongoDB Atlas on the Azure Cloud. The example provided here deploys a dedicated MongoDB cluster in a multi-region setup with vertical scaling and backup enabled.
 
+<img width="542" alt="Terraform demo" src="https://github.com/user-attachments/assets/d9acc13e-ae80-47e9-ad6a-8143e8d6741c">
+
 # Assumptions:
 
 Terraform version (Opensource):
