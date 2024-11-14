@@ -15,7 +15,7 @@ Terraform v1.8.2 (installed on a VM with CentOS Linux release 8.5.2111)
 
 Secrets Management: Secrets required for deployment, such as MongoDB Atlas Organization ID and MongoDB Atlas API Keys, are stored in Azure Key Vault (deployment of Azure Key Vault is not part of this Terraform codebase)
 
-Access Permissions: An Azure Service Principal is utilized to access the secrets stored in Azure Key Vault. This service principle requires the "Key Vault Secrets User" role access to the Azure Key Vault. In addition, the API keys on the MongoDB Atlas account have "organization owner" role to deploy the MongoDB database cluster.
+Access Permissions: An Azure Service Principal is utilized to access the secrets stored in Azure Key Vault. This service principle requires the "Key Vault Secrets User" role access to the Azure Key Vault. In addition, the API keys on the MongoDB Atlas account have "Organization Owner" role to deploy the MongoDB database cluster in this example.
 
 Configuration: Before deploying, ensure you have the necessary values associated with the Service Principal, Azure Subscription and Key Vault in the terraform.tfvars file. Here are the required variables for the service principle:
 
@@ -61,9 +61,9 @@ terraform destroy
 
 Ensure that the Azure Service Principal has appropriate permissions to access the Azure Key Vault secrets. Secrets are MongoDB org_id related to the MongoDB Atlas account organization and API keys.
 
-Ensure the on the MongoDB Atlas account the API keys have proper permissions to deploy database cluster (e.g., project owner or organization owner roles etc.)
+Ensure the on the MongoDB Atlas account the API keys have proper permissions to deploy database cluster (e.g., project owner or organization owner roles etc.).
 
-Keep sensitive information such as client secrets and API keys confidential and secure
+Keep sensitive information such as client secrets and API keys confidential and secure.
 
 
 # Alternate Terraform Environment (Terraform Cloud instead of Terraform Open Source)
