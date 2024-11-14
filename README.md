@@ -9,6 +9,8 @@ This repository contains Terraform configuration files for deploying resources t
 
 # Pre-requisites:
 
+MongoDB Atlas Account: MongoDB Atlas free account.
+
 Terraform version (Terraform Open Source):
 
 Terraform v1.8.2 (installed on a VM with CentOS Linux release 8.5.2111)
